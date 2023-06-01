@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Button Style-->
+    <Style x:Key="MainViewBtn" TargetType="Button">
+        <Setter Property="Height" Value="20"></Setter>
+        <Setter Property="Width" Value="100"></Setter>
+        
+                            <!--Or Set Using Static Resource-->
+        <!--<Setter Property="Foreground" Value="{StaticResource PrimaryColor}"/>-->
+    </Style>
+    
+</ResourceDictionary>

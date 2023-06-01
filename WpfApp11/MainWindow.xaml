@@ -1,0 +1,54 @@
+﻿<Window x:Class="WpfApp11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid>
+        
+        <!--Row Definition-->
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="120"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--Name TextBox Input-->
+        <Label Grid.Row="0" HorizontalAlignment="Center" Margin="0 0 110 0" Foreground="{StaticResource PrimaryColor}">Name:</Label>
+        <TextBox x:Name="TBName" Grid.Row="0" Width="145" Height="20"></TextBox>
+
+        <!--Age TextBox Input-->
+        <Label Grid.Row="1" HorizontalAlignment="Center" Margin="0 0 120 0" Foreground="{StaticResource PrimaryColor}" >Age:</Label>
+        <TextBox x:Name="TBAge" Grid.Row="1" Width="145" Height="20"></TextBox>
+
+        <!--Save & Show Buttons-->
+        <Grid Grid.Row="2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Style="{StaticResource MainViewBtn}" Margin="0 0 20 0" Click="BtnSaveClick">Save</Button>
+                <Button Style="{StaticResource MainViewBtn}" Click="BtnShowlick">Show</Button>
+            </StackPanel>
+        </Grid>
+
+        <!--ListBox Output Data-->
+        <ListBox x:Name="LBSavedData" Grid.Row="3" Width="200">
+            <ListBox.ContextMenu>
+                <ContextMenu x:Name="ContextMenuData">
+                    <MenuItem Header="Show" Click="ContextMenuShowClick"/>
+                    <MenuItem Header="Clear" Click="ContextMenuClearClick"/>
+                    <MenuItem Header="Delete Selected" Click="ContextMenuDeleteSelectedClick"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+
+        <!--Find TextBox Input-->
+        <TextBox x:Name="TBFind" Grid.Row="4" Width="145" Height="20"></TextBox>
+
+        <!--Find Button-->
+        <Button Style="{StaticResource MainViewBtn}" Grid.Row="5" Click="BtnFindClick">Find</Button>
+    </Grid>
+</Window>
